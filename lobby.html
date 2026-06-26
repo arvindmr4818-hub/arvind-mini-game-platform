@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎮 Arvind Game Platform</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: linear-gradient(135deg, #0d0221 0%, #1a0533 50%, #0a1628 100%);
+    min-height:100vh; font-family:'Arial',sans-serif; color:#fff;
+    display:flex; flex-direction:column; align-items:center;
+    padding: 30px 16px;
+  }
+  .logo { font-size:48px; margin-bottom:6px; }
+  h1 { font-size:22px; color:#ffd700; margin-bottom:4px; text-align:center; }
+  .subtitle { font-size:13px; color:#aaa; margin-bottom:30px; }
+
+  .games-grid {
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:16px; width:100%; max-width:400px;
+  }
+  .game-card {
+    background: rgba(255,255,255,0.05);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius:16px; padding:24px 16px;
+    text-align:center; cursor:pointer;
+    transition: all 0.25s; text-decoration:none; color:#fff;
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  .game-card:hover {
+    transform:translateY(-4px);
+    border-color:#ffd700;
+    background:rgba(255,215,0,0.08);
+    box-shadow: 0 8px 24px rgba(255,215,0,0.2);
+  }
+  .game-card .gicon { font-size:48px; }
+  .game-card .gtitle { font-size:15px; font-weight:bold; color:#ffd700; }
+  .game-card .gdesc { font-size:11px; color:#aaa; }
+  .game-card .gbadge {
+    background: rgba(255,215,0,0.15);
+    border:1px solid #ffd700;
+    border-radius:20px; padding:3px 10px;
+    font-size:11px; color:#ffd700;
+  }
+
+  .admin-link {
+    margin-top:30px;
+    color:#aaa; font-size:12px; text-decoration:none;
+    border:1px solid rgba(255,255,255,0.1);
+    padding:8px 20px; border-radius:20px;
+    transition: all 0.2s;
+  }
+  .admin-link:hover { color:#ffd700; border-color:#ffd700; }
+</style>
+</head>
+<body>
+  <div class="logo">🎮</div>
+  <h1>Arvind Game Platform</h1>
+  <p class="subtitle">Choose your game and start winning! 💎</p>
+
+  <div class="games-grid">
+    <a class="game-card" href="index.html">
+      <div class="gicon">🎡</div>
+      <div class="gtitle">Lucky Wheel</div>
+      <div class="gdesc">Bet on items, spin the Ferris Wheel!</div>
+      <div class="gbadge">Up to x45</div>
+    </a>
+    <a class="game-card" href="fishing.html">
+      <div class="gicon">🎣</div>
+      <div class="gtitle">Fishing</div>
+      <div class="gdesc">Cast your line, catch big fish!</div>
+      <div class="gbadge">Up to x100</div>
+    </a>
+  </div>
+
+  <a class="admin-link" href="admin.html">⚙️ Admin Panel</a>
+</body>
+</html>
